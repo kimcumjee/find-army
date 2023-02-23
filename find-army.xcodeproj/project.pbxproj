@@ -13,6 +13,11 @@
 		1081F5A929A7B1DE009A80D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1081F5A729A7B1DE009A80D4 /* Main.storyboard */; };
 		1081F5AB29A7B1DF009A80D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1081F5AA29A7B1DF009A80D4 /* Assets.xcassets */; };
 		1081F5AE29A7B1DF009A80D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1081F5AC29A7B1DF009A80D4 /* LaunchScreen.storyboard */; };
+		1081F5B729A7B304009A80D4 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1081F5B629A7B304009A80D4 /* SnapKit */; };
+		1081F5BA29A7B323009A80D4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 1081F5B929A7B323009A80D4 /* RxCocoa */; };
+		1081F5BC29A7B323009A80D4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 1081F5BB29A7B323009A80D4 /* RxSwift */; };
+		1081F5BF29A7B355009A80D4 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 1081F5BE29A7B355009A80D4 /* Moya */; };
+		1081F5C429A7B46F009A80D4 /* ArmyAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1081F5C329A7B46F009A80D4 /* ArmyAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,7 @@
 		1081F5AA29A7B1DF009A80D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1081F5AD29A7B1DF009A80D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1081F5AF29A7B1DF009A80D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1081F5C329A7B46F009A80D4 /* ArmyAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1081F5BC29A7B323009A80D4 /* RxSwift in Frameworks */,
+				1081F5BA29A7B323009A80D4 /* RxCocoa in Frameworks */,
+				1081F5BF29A7B355009A80D4 /* Moya in Frameworks */,
+				1081F5B729A7B304009A80D4 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +66,40 @@
 		1081F5A029A7B1DE009A80D4 /* find-army */ = {
 			isa = PBXGroup;
 			children = (
-				1081F5A129A7B1DE009A80D4 /* AppDelegate.swift */,
-				1081F5A329A7B1DE009A80D4 /* SceneDelegate.swift */,
+				1081F5C229A7B421009A80D4 /* Delegate */,
+				1081F5C129A7B40F009A80D4 /* Misc */,
+				1081F5C029A7B3FA009A80D4 /* Resources */,
 				1081F5A529A7B1DE009A80D4 /* ViewController.swift */,
-				1081F5A729A7B1DE009A80D4 /* Main.storyboard */,
+				1081F5C329A7B46F009A80D4 /* ArmyAPI.swift */,
+			);
+			path = "find-army";
+			sourceTree = "<group>";
+		};
+		1081F5C029A7B3FA009A80D4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				1081F5AA29A7B1DF009A80D4 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1081F5C129A7B40F009A80D4 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				1081F5A729A7B1DE009A80D4 /* Main.storyboard */,
 				1081F5AC29A7B1DF009A80D4 /* LaunchScreen.storyboard */,
 				1081F5AF29A7B1DF009A80D4 /* Info.plist */,
 			);
-			path = "find-army";
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		1081F5C229A7B421009A80D4 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1081F5A129A7B1DE009A80D4 /* AppDelegate.swift */,
+				1081F5A329A7B1DE009A80D4 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +118,12 @@
 			dependencies = (
 			);
 			name = "find-army";
+			packageProductDependencies = (
+				1081F5B629A7B304009A80D4 /* SnapKit */,
+				1081F5B929A7B323009A80D4 /* RxCocoa */,
+				1081F5BB29A7B323009A80D4 /* RxSwift */,
+				1081F5BE29A7B355009A80D4 /* Moya */,
+			);
 			productName = "find-army";
 			productReference = 1081F59E29A7B1DE009A80D4 /* find-army.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +152,11 @@
 				Base,
 			);
 			mainGroup = 1081F59529A7B1DE009A80D4;
+			packageReferences = (
+				1081F5B529A7B304009A80D4 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				1081F5B829A7B323009A80D4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				1081F5BD29A7B355009A80D4 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 1081F59F29A7B1DE009A80D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +186,7 @@
 			files = (
 				1081F5A629A7B1DE009A80D4 /* ViewController.swift in Sources */,
 				1081F5A229A7B1DE009A80D4 /* AppDelegate.swift in Sources */,
+				1081F5C429A7B46F009A80D4 /* ArmyAPI.swift in Sources */,
 				1081F5A429A7B1DE009A80D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +407,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1081F5B529A7B304009A80D4 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+		1081F5B829A7B323009A80D4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		1081F5BD29A7B355009A80D4 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1081F5B629A7B304009A80D4 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1081F5B529A7B304009A80D4 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		1081F5B929A7B323009A80D4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1081F5B829A7B323009A80D4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		1081F5BB29A7B323009A80D4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1081F5B829A7B323009A80D4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		1081F5BE29A7B355009A80D4 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1081F5BD29A7B355009A80D4 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1081F59629A7B1DE009A80D4 /* Project object */;
 }
